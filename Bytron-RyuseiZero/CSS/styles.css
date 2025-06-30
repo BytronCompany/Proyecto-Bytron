@@ -8,3 +8,7 @@
   font-style: normal;
   color: blueviolet;
 }
+.nav-list{
+  list-style: none;
+  text-decoration: none;
+}
