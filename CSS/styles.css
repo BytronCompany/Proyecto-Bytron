@@ -12,6 +12,9 @@
   list-style: none;
   text-decoration: none;
 }
+.url{
+  color: rgb(177, 0, 0);
+}
 .glitch {
   font-family: "Rubik Glitch", system-ui;
   font-weight: 100;
