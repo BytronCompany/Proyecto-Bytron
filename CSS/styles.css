@@ -106,6 +106,7 @@ max-width: 1100px;
             display: flex;
             /* Flexbox para el layout principal */
             gap: 24px;
+          background:#3D3D3D;
 
         }
 
@@ -119,4 +120,5 @@ max-width: 1100px;
             border-top: 1px solid #eef3f8;
         }
         
+
 
