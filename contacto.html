@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Bytron Company</title>
+    <style>
+        /* Reset básico */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .press-start-2p-regular {
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            color: blueviolet;
+        }
+
+        .glitch {
+            font-family: "Rubik Glitch", system-ui;
+            font-weight: 100;
+            font-style: normal;
+            color: cyan;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: Inter, system-ui, Arial, sans-serif;
+            color: #003bec;
+            background-color: black;
+        }
+
+        /* Contenedor principal */
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #000000, #400060);
+            color: white;
+            padding: 12px 20px;
+        }
+
+        .nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 0.3px;
+            color: aqua;
+        }
+
+        /* Navegación */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background .18s, transform .12s;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .cta {
+            background: rgba(0, 234, 255, 0.12) !important;
+            border: 1px solid rgba(0, 234, 255, 0.18) !important;
+        }
+
+        /* Main */
+        main {
+            flex: 1 0 auto;
+            padding: 28px 20px;
+            background: #000000;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .sidebar {
+            width: 260px;
+            background: #1a1a1a;
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 234, 255, 0.18);
+            flex-shrink: 0;
+            animation: slideInLeft 0.8s ease-out;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 234, 255, 0.3);
+            border-color: rgba(0, 234, 255, 0.4);
+        }
+
+        .sidebar h3 {
+            color: cyan;
+            margin-bottom: 16px;
+            font-size: 0.8rem;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .contact-info {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .contact-info i {
+            color: #00eaff;
+            margin-right: 8px;
+        }
+
+        .contact-info p {
+            margin-bottom: 12px;
+        }
+
+        .content {
+            flex: 1 1 0;
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 234, 255, 0.18);
+        }
+
+        .content h1 {
+            margin-bottom: 16px;
+        }
+
+        .content h2 {
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            color: cyan;
+        }
+
+        /* Formulario */
+        .contact-form {
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 234, 255, 0.18);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00eaff;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: #1a1a1a;
+            border: 1px solid rgba(0, 234, 255, 0.3);
+            border-radius: 6px;
+            color: #ccc;
+            font-family: inherit;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00eaff;
+            box-shadow: 0 0 10px rgba(0, 234, 255, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #00eaff, #0066ff);
+            color: #000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 234, 255, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #000000;
+            padding: 14px 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: rgb(238, 0, 0);
+            border-top: 1px solid rgba(0, 234, 255, 0.18);
+        }
+
+        /* Animaciones */
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px cyan, 0 0 10px cyan;
+            }
+            to {
+                text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+            }
+            
+            nav ul {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="nav-row">
+                <div class="brand">Bytron Company</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="proyectos.html"><i class="fas fa-project-diagram"></i> Proyectos</a></li>
+                        <li><a href="acerca-de.html"><i class="fas fa-info-circle"></i> Acerca</a></li>
+                        <li><a class="cta" href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <aside class="sidebar">
+                    <h3 class="press-start-2p-regular">Información de Contacto</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@bytroncompany.com</p>
+                        <p><i class="fas fa-phone"></i> +54 11 4567-8900</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Silicon Valley, CA</p>
+                        <p><i class="fas fa-clock"></i> Lun - Vie: 9:00 - 18:00</p>
+                        <p><i class="fas fa-globe"></i> www.bytroncompany.com</p>
+                    </div>
+                </aside>
+
+                <section class="content">
+                    <h1 class="glitch">Contáctanos</h1>
+                    <h2 class="press-start-2p-regular">¿Tienes preguntas sobre Bytron?</h2>
+                    <p style="color: #ccc; margin-bottom: 30px;">Estamos aquí para ayudarte. Envíanos un mensaje y nos pondremos en contacto contigo lo antes posible.</p>
+                    
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/mkvjq" method="POST">
+                            <div class="form-group">
+                                <label for="nombre"><i class="fas fa-user"></i> Nombre Completo</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="asunto"><i class="fas fa-tag"></i> Asunto</label>
+                                <input type="text" id="asunto" name="asunto" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensaje"><i class="fas fa-comment"></i> Mensaje</label>
+                                <textarea id="mensaje" name="message" placeholder="Cuéntanos sobre tu interés en Bytron..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p class="press-start-2p-regular">© 2025 - By RyuseiZero, Zenrit, Olivia, Sylverduck</p>
+        </footer>
+    </div>
+</body>
+
+</html>
