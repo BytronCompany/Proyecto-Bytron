@@ -8,4 +8,4 @@
 
 ¿Listo para transformar ideas en realidad digital? En **Bytron Company** convertimos tu visión en soluciones tecnológicas que marcan la diferencia. Desarrollamos software innovador, intuitivo y escalable que impulsa negocios hacia el futuro.
 
-💡 **Innovación** | ⚡ **Velocidad** | 🎯 **Resultados**
+💡 Innovación | ⚡ Velocidad | 🎯 Resultados
