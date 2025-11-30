@@ -1,6 +1,6 @@
  Proyecto Bytron Company
 
-[musica de fondo para leer el proyecto](https://www.youtube.com/watch?v=4Lb1G0QHxyE&list=PLbw4RMkPz3C1cgT8q-pgtmQGDfM_T44bq) //abrir en una pestaña diferente
+[Abrir video en youtube de nuestra musica de fondo para tener la verdadera experiencia](https://www.youtube.com/watch?v=4Lb1G0QHxyE&list=PLbw4RMkPz3C1cgT8q-pgtmQGDfM_T44bq)
 
 ![Logo](imagen/logo.png)
 
